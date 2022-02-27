@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#reads every .txt and the screenshots after everyread
+
+
+mkdir ./screenoutput
+for txt in *.txt
+do
+	cat "$txt"
+	sleep 2
+	scrot ./screenoutput/"$txt".png
+	clear
+done

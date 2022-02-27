@@ -1,0 +1,9 @@
+#!/bin/bash 
+
+# This script makes a .txt ascii version of every png in ./ and makes an output in ./ to place them
+
+mkdir ./aimagefill
+for file in *.png
+do
+	jp2a "$file" --color --background=dark  --fill | cat > ./aimagefill/"$file".txt
+done

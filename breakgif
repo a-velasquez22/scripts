@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for webp in *.gif
+do
+	mkdir "$webp-png"
+	convert -coalesce "$webp" "$webp-png"/"$webp".png
+done
+

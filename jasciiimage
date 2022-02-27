@@ -1,0 +1,13 @@
+#!/bin/bash 
+
+# This script makes a .txt ascii version of every png in ./ and makes an output in ./ to place them
+
+mkdir ./jasciiimage
+for file in *.jpg
+do
+	# jp2a "$file" --color -f --term-fit --background=light | cat > ./asciiimage/"$file".txt
+
+	# jp2a "$file" --color -f --term-fit --background=dark --invert | cat > ./asciiimage/"$file".txt
+
+	jp2a "$file" --color -f --term-fit --background=dark | cat > ./jasciiimage/"$file".txt
+done

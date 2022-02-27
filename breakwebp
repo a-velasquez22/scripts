@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for webp in *.webp
+do
+	mkdir "$webp-png"
+	convert -coalesce  -dispose previous "$webp" "$webp-png"/"$webp".png
+done
+

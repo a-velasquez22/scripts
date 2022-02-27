@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This script just reads every ascii in ./
+
+for txt in *.txt
+do
+	clear
+	cat $txt
+done

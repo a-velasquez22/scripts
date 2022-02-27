@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mkdir ../0gifs
+for dir in */
+do
+	cd "$dir"
+	 convert -resize 1280x720  -delay 30 *.png "output.gif"
+	 var="$(basename -- "$dir")"
+	 mv output.gif  "$var.gif"
+	 mv *.gif ../../0gifs
+	 cd ..
+	# echo "$dir"
+done
+
+

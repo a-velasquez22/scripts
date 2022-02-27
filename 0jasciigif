@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+
+for webp in *.webp
+do
+	mkdir "$webp-gif"
+	mogrify -format jpg $webp
+	mv *.jpg ./$webp-gif
+	cd ./$webp-gif 
+
+	# aimagefill
+	# cd ./aimagefill
+
+	jasciiimage
+	cd ./jasciiimage
+
+	# makeasciiconvert
+	# cd./makeasciiconvert
+
+	screenshotascii 
+	cd screenoutput
+	convert -resize 786x576 -delay 25 *.jpg output.gif
+	cd ../../../
+done 

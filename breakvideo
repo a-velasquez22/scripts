@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for mp4 in *.mp4
+do
+	mkdir "$mp4-imgs"
+	ffmpeg -i "$mp4" ./"$mp4-imgs"/img%04d.png
+done 
+

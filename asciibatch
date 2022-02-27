@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+
+for webp in *.png
+do
+
+	# aimagefill
+	# cd ./aimagefill
+	# screenshotascii
+	
+	# cd .. 
+
+	asciiimage
+	cd ./asciiimage
+	screenshotascii
+	# cd .. 
+
+	# makeasciiconvert
+	# cd ./makeasciiconvert
+
+	# screenshotascii 
+	break
+done 

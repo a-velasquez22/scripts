@@ -1,0 +1,27 @@
+#making ascii gifs
+
+0asciigif - turning gif into ascii 
+gifascii - turn a webp into a ascii gif 
+
+#ascii methods 
+
+asciimage - classic jp2a method 
+aimagefill - jp2a with fill much more color but less detail
+makeasciiconvert - a middle ground betwen the two above
+
+#making gifs in general
+
+convert -resize wxh -delay n *.png output.gif 
+	- make sure size is 786x576 or 1280x720 for upscale 
+	- n is the speed with 0 fastest and anything above slowest try using the range of 25
+	
+#working with vids
+
+getvidaudio - get audio of every mp4 in dir
+breakvideo - breaks a vid into pngs of every frame
+putvidtogether- makes a vid from every frame in dir
+put4kvidtogther- same but 4k
+ffmpeg -i vid.mp4 -i vidaudio.aac -map 0:v -map 1:a -c:v copy -shortest output.mp4  -copy vid and put audio in copy
+
+
+

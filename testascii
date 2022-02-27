@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This script just reads every ascii in ./
+
+for txt in *.png
+do
+	clear
+	ascii-image-converter $txt -b  --threshold 30 -c -C 
+done

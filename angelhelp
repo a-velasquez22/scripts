@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Here are your scripts:"
+
+ls ~/Scripts 

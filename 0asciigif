@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+
+mkdir asciigifs
+for webp in *.gif
+do
+	mkdir "$webp-gif"
+	convert -coalesce $webp "$webp.jpg"
+	mv *.jpg ./$webp-gif
+	cd ./$webp-gif 
+
+	# jaimagefill
+	# cd ./jaimagefill
+
+	jasciiimage
+	cd ./jasciiimage
+
+	# jmakeasciiconvert
+	# cd ./jmakeasciiconvert
+
+	screenshotascii 
+	cd screenoutput
+	convert -resize 1280x720 -delay 25 *.png $webp.gif
+	mv $webp.gif ../../../asciigifs	
+	cd ../../../
+done 

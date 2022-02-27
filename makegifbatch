@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read png1
+
+convert -resize 1280x720 -delay 25 $png1*.png $png1.gif

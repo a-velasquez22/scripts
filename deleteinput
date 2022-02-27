@@ -1,0 +1,6 @@
+#!/bin/bash
+for png in *
+do
+	rm ../input/"$png"
+done
+
